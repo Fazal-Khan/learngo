@@ -72,6 +72,11 @@ func (this *LList) Last() (bool, interface{}) {
 }
 
 //------ util methods -------------------->
+
+func (this *LList) Lock() sync.Mutex {
+	return this.lock
+}
+
 //------ toString in golang
 func (this *LList) String() string {
 	var buffer bytes.Buffer
